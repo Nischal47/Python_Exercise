@@ -16,3 +16,14 @@ Json,21,85
 Then, the output of the program should be:
 [('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
 '''
+from operator import itemgetter
+Person=[]
+while True:
+    s=input("Enter Name, Age and Score seperated by comma")
+    if(s):
+        Person.append(tuple(s.split(',')))
+    else:
+        break
+print(sorted(Person, key=itemgetter(2,1,0)))
+
+
